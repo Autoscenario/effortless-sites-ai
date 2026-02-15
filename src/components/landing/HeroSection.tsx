@@ -89,7 +89,7 @@ export const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Dashboard Screenshot */}
+        {/* Demo Video */}
         <motion.div
           initial={{ opacity: 0, y: 60, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -97,12 +97,14 @@ export const HeroSection = () => {
           className="relative mx-auto mt-20 max-w-5xl"
         >
           <div className="absolute inset-0 -m-4 rounded-3xl bg-gradient-to-b from-primary/10 to-transparent blur-2xl" />
-          <div className="relative overflow-hidden rounded-2xl border border-border bg-surface shadow-card-hover">
-            <img
-              src={heroDashboard}
-              alt="Scenario AI Dashboard — senaryo editörü, trend analizi ve AI agent paneli"
-              className="w-full"
-              loading="eager"
+          <div className="relative overflow-hidden rounded-2xl border border-border bg-surface shadow-card-hover aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/xDwR1_vrIg8"
+              title="Scenario AI Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="absolute inset-0 h-full w-full"
+              loading="lazy"
             />
           </div>
           {/* Floating elements */}
