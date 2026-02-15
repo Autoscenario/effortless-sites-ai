@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { Card3D } from "./Card3D";
 
 const plans = [
   {
@@ -78,12 +79,12 @@ export const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`relative flex flex-col rounded-2xl border p-8 transition-all duration-300 hover:-translate-y-1 ${
+            >
+              <Card3D className={`relative flex flex-col rounded-2xl border p-8 transition-all duration-300 hover:-translate-y-1 ${
                 plan.highlighted
                   ? "border-primary bg-surface shadow-primary"
                   : "border-border bg-surface shadow-card hover:shadow-card-hover"
-              }`}
-            >
+              }`}>
               {plan.highlighted && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground">
                   En Popüler
@@ -122,6 +123,7 @@ export const PricingSection = () => {
               >
                 {plan.cta}
               </button>
+              </Card3D>
             </motion.div>
           ))}
         </div>

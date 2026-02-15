@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Search, PenTool, Type, Image, Film, Mail } from "lucide-react";
+import { Card3D } from "./Card3D";
 
 const features = [
   {
@@ -65,13 +66,14 @@ export const FeaturesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group relative rounded-2xl border border-border bg-surface p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
             >
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-soft text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                <feature.icon className="h-5 w-5" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground">{feature.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-text-secondary">{feature.description}</p>
+              <Card3D className="group relative rounded-2xl border border-border bg-surface p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover">
+                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-soft text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <feature.icon className="h-5 w-5" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground">{feature.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-text-secondary">{feature.description}</p>
+              </Card3D>
             </motion.div>
           ))}
         </div>

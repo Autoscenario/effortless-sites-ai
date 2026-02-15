@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, Eye, Lock } from "lucide-react";
+import { Card3D } from "./Card3D";
 
 export const TrustSection = () => {
   return (
@@ -48,13 +49,14 @@ export const TrustSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="rounded-2xl border border-border bg-surface p-8 text-center shadow-card transition-all hover:shadow-card-hover"
             >
-              <div className="mx-auto mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-success-soft text-success">
-                <item.icon className="h-6 w-6" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-text-secondary">{item.description}</p>
+              <Card3D className="rounded-2xl border border-border bg-surface p-8 text-center shadow-card transition-all hover:shadow-card-hover">
+                <div className="mx-auto mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-success-soft text-success">
+                  <item.icon className="h-6 w-6" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-text-secondary">{item.description}</p>
+              </Card3D>
             </motion.div>
           ))}
         </div>
